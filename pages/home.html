@@ -5,8 +5,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/styling/home.css">
+  <link rel="stylesheet" href="codepen.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="" href="https://unpkg.com/splitting/dist/splitting.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;500;600&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 </head>
 <body>
-  
+  <nav>
+    <div class="left">
+      <a href=""><ion-icon name="calendar-number-outline"></ion-icon></a>
+      <a href=""><ion-icon name="rocket-outline"></ion-icon></a>
+      <a href=""><ion-icon name="paw-outline"></ion-icon></a>
+      <a href=""><ion-icon name="shirt-outline"></ion-icon></a>
+    </div>
+  </nav>
+
+  <div class="mainContent">
+    <p class="text">O'Bryant Class of 2023</p>
+    </body>
+  <div class="bottomRight">
+    <div class="helpIcon">
+      <a href=""><ion-icon name="help-outline"></ion-icon></ion-icon></a>
+    </div>
+  </div>
+  <div class="second">
+    <button id="vote">Vote</button>
+  </div>
 </body>
+<script src="/scripts/script.js">
+  document.getElementById("vote").addEventListener("click", function() {
+  console.log("clicked")
+})
+</script>
+<script src="/Firebase/firebaseApp.js"></script>
+<script src="/Firebase/firebase.js"></script>
+<script src="/scripts/script.js"></script>
 </html>
