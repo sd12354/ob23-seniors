@@ -1,13 +1,4 @@
-
-document.addEventListener("load", pageLoad);
-
-function pageLoad(){
-  console.log("Page Loaded");
-  vote = document.getElementById("vote");
-  vote.addEventListener("vote", myFunction);
-
-}
-function myFunction() {
-  console.log("ran");
-}
-console.log("connected");
+document.getElementById('vote').addEventListener('click', function(event) {
+	const button = event.target;
+	button.innerText = (Number(button.innerText) || 0) + 1;
+})
