@@ -9,6 +9,13 @@ body {
   font-family: "Poppins", sans-serif;
   place-items: center;
   background: linear-gradient(315deg, #ffffff, #ffffff);
+
+  -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #cc0000;
 }
 nav {
   left: 25px;
@@ -56,7 +63,7 @@ nav {
   color: #285FAB;
 }
 
-.helpIcon a:hover {
+.helpIcon hover {
   background-color: rgb(233, 233, 233);
 }
 
@@ -88,4 +95,10 @@ nav {
   min-height: 100vh;
   height: 100%;
   vertical-align: middle;
+}
+.grid h2 {
+  padding: 16px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: black: 
 }
