@@ -4,44 +4,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login</title>
+  <title>Vote</title>
+  <link rel="stylesheet" href="/styling/vote.css">
 </head>
 <body>
-  <h1 id="topTxt">Login</h1>
+  <button id="signOut">Log Out</button>
+  <h1 id="top">Vote Now!</h1>
   <div class="form" id="topTxt2">
     <button id="login">Login with Google</button>
-  </div>
-  <div class="vote">
+  <div class="vote" id="vote">
     <h2>Vote Now!</h2>
-    <p>Select President</p>
+    <p>President</p>
     <select name="president" id="president">
-      <option value="volvo">Alec Kushmerek</option>
-      <option value="saab">Alanie</option>
-      <option value="mercedes">Karissa Davis</option>
-      <option value="audi">Feodora</option>
+      <option value="alec">Alec Kushmerek</option>
+      <option value="alanie">Alanie Alexandre</option>
+      <option value="karissa">Karissa Davis</option>
+      <option value="feodora">Feodora Etelier</option>
+      <option value="onyeka">Onyeka Unaegbu</option>
     </select>
-    <p>Select Vice President</p>
-    <select name="president" id="president">
-      <option value="volvo">Alec Kushmerek</option>
-      <option value="saab">Alanie</option>
-      <option value="mercedes">Karissa Davis</option>
-      <option value="audi">Feodora</option>
+    <p>Vice President</p>
+    <select name="vicepresident" id="vicePresident">
+      <option value="liban">Liban Mohamed</option>
+      <option value="kimberly">Kimberly Nguyen</option>
+      <option value="ariana">Ariana Riona</option>
+      <option value="maleeha">Maleeha Wasim</option>
     </select>
-    <p>Select Secretary</p>
-    <select name="president" id="president">
-      <option value="volvo">Alec Kushmerek</option>
-      <option value="saab">Alanie</option>
-      <option value="mercedes">Karissa Davis</option>
-      <option value="audi">Feodora</option>
+    <p>Secretary</p>
+    <select name="secretary" id="secretary">
+      <option value="felisha">Felisha Semedo</option>
+      <option value="tracy">Tracy Nguyen</option>
     </select>
-    <p>Select Activities Coordinator</p>
-    <select name="president" id="president">
-      <option value="volvo">Alec Kushmerek</option>
-      <option value="saab">Alanie</option>
-      <option value="mercedes">Karissa Davis</option>
-      <option value="audi">Feodora</option>
+    <p>Activities Coordinator</p>
+    <select name="acoordinator" id="acoordinator">
+      <option value="mehkiya">Mehkiya Adams</option>
+      <option value="nailah">Naliah Dunker</option>
+      <option value="samuel">Samuel Gordon</option>
+      <option value="feven">Feven Lilay</option>
+      <option value="desmond">Desmond Ugoji</option>
     </select>
     <button id="submit">Submit</button>
+  </div>
+  <div class="h3" style="font-weight: bolder;">Thank you for your vote!</div>
+  <a href="/pages/home.html">Click here to return home</a>
   </div>
 </body>
 <script src="/scripts/auth.js" type="module"></script>

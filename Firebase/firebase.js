@@ -13,12 +13,7 @@ const firebaseConfig = {
   storageBucket: "ob23-79bf7.appspot.com",
   messagingSenderId: "4160114273",
   appId: "1:4160114273:web:b9d602275a1872471ae420",
-  measurementId: "G-E14JPZZTT4"
+  measurementId: "G-E14JPZZTT4",
+  databaseURL: "https://DATABASE_NAME.firebaseio.com",
 };
 
-firebase.initializeApp(config);
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-var database = firebase.database();

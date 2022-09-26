@@ -3,19 +3,31 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: none;
-  background-color: #285FAB;
   padding: 0px;
   margin: 0px;
-  font-family: "Poppins", sans-serif;
+  text-align: center;
   place-items: center;
-  background: linear-gradient(315deg, #ffffff, #ffffff);
-
+  font-family: 'Be Vietnam Pro', sans-serif;
   -webkit-user-select: none;
-        -webkit-touch-callout: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        color: #cc0000;
+}
+.right {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 16px;
+  letter-spacing: 2px;
+  background-color: white;
+}
+.right a {
+  border: none;
+  text-decoration: none;
+  color: black;
+  padding: 16px;
+}
+.right a:hover {
+  border-bottom-width: 0px;
+  border-bottom-style: none;
+  opacity: 90%;
 }
 nav {
   left: 25px;
@@ -36,7 +48,7 @@ nav {
 .left a {
   padding: 16px;
   text-decoration: none;
-  color: #285FAB;
+  color: black;
   font-family: 'Gothic A1', sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
@@ -73,10 +85,10 @@ nav {
   -webkit-background-clip: text; 
   background-clip: text; 
   color: transparent;
-  
+  font-family: 'Bungee', cursive;
+  text-align: center;
   background-size: 300%;
   background-position: -100%;  
-  
   animation: animatedText 5s infinite alternate-reverse;
 }
 
@@ -88,10 +100,29 @@ nav {
 .mainContent{
   height: 100%;
   padding: 8rem;
-  font-size: 10rem;
+  font-size: 6rem;
   text-align: center;
 }
 .second {
+  padding: 32px;
+  height: 60vh;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+.second p {
+  font-size: 1rem;
+
+}
+.second a {
+  background-color: #76d2fa;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-decoration: none;
+
+}
+.third {
   min-height: 100vh;
   height: 100%;
   vertical-align: middle;
@@ -101,4 +132,122 @@ nav {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: black;
+}
+
+#vote {
+  background-color: #76d2fa;
+  color: white;
+  height: 40px;
+  width: 175px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.canidates {
+  grid-template-columns: auto;
+
+}
+.current {
+  font-size: 1rem;
+  height: fit-content;
+  padding: 32px;
+  position: relative;
+  top: 100px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+}
+.boxPrelim {
+  height: 400px;
+  width: 400px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  color: rgb(27, 153, 255);
+  padding: 16px;
+  width: fit-content;
+  min-width: 550px;
+  position: relative;
+  text-align: center;
+}
+.countdown {
+  position: relative;
+  left: 10px;
+  top: 10px;
+  border-radius: 40px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  width: fit-content;
+  min-width: 150px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.countdown p {
+  padding: 16px;
+}
+#currentPolls {
+  font-size: 2rem;
+  position: relative;
+  top: 100px;
+  padding-top: 100px;
+}
+#note {
+  font-size: 1rem;
+  position: relative;
+  top: 100px;
+  padding-bottom: 10px;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  margin: 0 auto;
+  z-index: 1; /* Sit on top */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  text-align: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 0% auto; /* 15% from the top and centered */
+  padding: 20px;
+  height: 100vh;;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  right:20px;
+  
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+footer {
+  position: relative;
+  bottom: 0;
+  padding: 8px;
+  width: 100%;
+  background-color: black;
 }
