@@ -2,6 +2,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
   import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signInWithPopup, signOut} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,7 +23,7 @@
   const analytics = getAnalytics(app);
   const provider = new GoogleAuthProvider(app);
   const auth = getAuth(app);
-
+  const database = getDatabase(app);
   provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
   login.addEventListener("click", (e) => {
     signInWithPopup(auth, provider)
@@ -33,6 +34,7 @@
       // The signed-in user info.
       const user = result.user;
       login.style.display = "none"
+      localStorage.setItem("email", user.email)
       console.log(user.email)
       document.getElementById("top").innerHTML = "Welcome " + user.email + " !"
       vote.style.display = "block"
@@ -43,7 +45,6 @@
       const errorCode = error.code;
       const errorMessage = error.message;
       // The email of the user's account used.
-      const email = error.customData.email;
       // The AuthCredential type that was used.
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
@@ -54,17 +55,25 @@
 
 document.getElementById("submit").addEventListener("click", (e) => {
   document.getElementById("vote").style.display = "none"
+  var email = "dobsdesigns432@gmail.com";
+  var president = document.getElementById('president').value;
+  var vicePresident = document.getElementById('vicePresident').value;
+  var secretary = document.getElementById('secretary').value;
+  var acoordinator = document.getElementById('acoordinator').value;
+    const db = getDatabase();
+    set(ref(db, 'canidates'), {
+      email: email,
+      president: president,
+      vicePresident: vicePresident,
+      secretary: secretary,
+      acoordinator: acoordinator,
+    });
+
+
 })
 
 // Vote
-var president = document.getElementById('president');
-var presidentSelected = select.options[select.selectedIndex].value;
-var vicePresident = document.getElementById('vicePresident');
-var vicePresidentSelected = select.options[select.selectedIndex].value;
-var secretary = document.getElementById('secretary');
-var secretarySelected = select.options[select.selectedIndex].value;
-var acoordinator = document.getElementById('acoordinator');
-var acoordinatorSelected = select.options[select.selectedIndex].value;
+
 
 
 
